@@ -17,7 +17,7 @@ btn.addEventListener("click",()=>{
     //let inputTask = document.querySelector("input[nam=descTask]")
     let inputTask = document.querySelectorAll("input")
 
-    inputTask[2]
+    inputTask[2].value = btn.innerText
 
 
 })
@@ -26,7 +26,7 @@ btn.addEventListener("click",()=>{
 const minhaFuncao = () => {
     let a = 10
     let b = 10
-    return(a + b)
+    return(a + b + c)
 }
 //HOISTING
 var c = 5
