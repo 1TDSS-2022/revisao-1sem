@@ -30,5 +30,5 @@ const minhaFuncao = () => {
 var c = 5
 
 //CRIAR O OBJETO 
-//ADICIONAR OS DADOS DOS CAMPOS DO OBJETO
+//ADICIONAR OS DADOSaaaaaaa DOS CAMPOS DO OBJETO
 //IMPRIMIR O OBJETO COM console.log()
