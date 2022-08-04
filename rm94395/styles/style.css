@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    background-color: aqua;
+}
+
+fieldset {
+    padding: 10px;
+    background-color: blueviolet;
+}
+
