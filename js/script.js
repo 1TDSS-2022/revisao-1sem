@@ -25,5 +25,12 @@ const minhaFuncao = ()=> {
 var c = 5
 
 //CRIAR UM OBJETO
+const chocolate = new Object();
+
 //ADICIONAR OS DADOS DOS CAMPOS NO OBJETO
+chocolate.sabor = "Ao leite";
+chocolate.marca = "Lindt"
+chocolate.peso = 0.500
+
 //IMPRIMIR O OBJETO COM console.log()
+console.log(chocolate)
