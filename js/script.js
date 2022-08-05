@@ -24,13 +24,38 @@ const minhaFuncao = ()=> {
 //HOISTING
 var c = 5
 
-//CRIAR UM OBJETO
+//CRIADO UM OBJETO
 const chocolate = new Object();
 
-//ADICIONAR OS DADOS DOS CAMPOS NO OBJETO
 chocolate.sabor = "Ao leite";
 chocolate.marca = "Lindt"
 chocolate.peso = 0.500
 
-//IMPRIMIR O OBJETO COM console.log()
 console.log(chocolate)
+
+//CRIAR UM OBJETO
+const tarefa= {
+    nmTask: '',
+    dtTask: '',
+    descTask: '',
+
+    //ADICIONAR OS DADOS DOS CAMPOS NO OBJETO
+    task : function (nmTask, dtTask, descTask) {
+        this.nmTask = nmTask
+        this.dtTask = dtTask
+        this.descTask = descTask
+    }
+}
+
+//ATRELANDO O EVENTO DE CLICK AO BOTÃO DE ADICIONAR TAREFA
+btn.addEventListener('click', function() {
+    //RECUPERANDO OS DADOS DO FORM
+    let inputTask = document.querySelectorAll('input')
+
+    tarefa.task(inputTask[0].value, inputTask[1].value, inputTask[2].value)
+    console.log(tarefa)
+})
+
+
+
+//IMPRIMIR O OBJETO COM console.log()
