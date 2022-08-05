@@ -7,7 +7,7 @@
 // document - O document manipula elementos do DOM
 //document.write("Olá Mundo!!!") //- Com o Defer, o write não funciona, ele fica em espera
 
-const btn = document.getElementById("btnEnviar")
+// const btn = document.getElementById("btnEnviar")
 
 /*function msg(){
     alert('CLIQUEI !!!')
@@ -18,14 +18,14 @@ const btn = document.getElementById("btnEnviar")
 })*/
 
 
-btn.addEventListener("click", function(){
+/*btn.addEventListener("click", function(){
     //alert(`Resultado : ${minhaFuncao()}`)
     //let inputTask = document.querySelector("input[name=descTask]")
     let inputTask = document.querySelectorAll("input")
 
     inputTask[2].value = btn.innerText
 
-})
+})*/
 
 //ARROW FUNCTION
 const minhaFuncao = () => {
@@ -40,3 +40,18 @@ var c = 5
 //CRIAR UM OBJETO
 //ADICIONAR OS DADOS DOS CAMPOS NO OBJETO
 //IMPRIMIR O OBJETO COM O console.log()
+
+const trabalho = {
+    tarefa: 'teste',
+    descricao: 'descritivo'
+}
+
+trabalho.addEventListener("click", function(){
+    //alert(`Resultado : ${minhaFuncao()}`)
+    //let inputTask = document.querySelector("input[name=descTask]")
+    let inputTask = document.querySelectorAll("input")
+
+    inputTask[1].value = trabalho(1).innerText
+    inputTask[2].value = trabalho.innerText
+
+})
