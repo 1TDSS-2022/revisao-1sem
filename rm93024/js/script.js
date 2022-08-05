@@ -13,15 +13,14 @@ const btn = document.getElementById("btnEnviar")
 
 btn.addEventListener("click",()=>{
     alert('Resultado: ${minhaFuncao()}' )
-    Let inputTask = document.querySelectorAll("input") 
+    let inputTask = document.querySelectorAll("input") 
 
     inputTask[2].value = btn.innerText
-    
 })
 
 const minhaFuncao =() => {
-    Let a = 10
-    Let b = 10
+    let a = 10
+    let b = 10
     return (a + b + c)
 }
 
