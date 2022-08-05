@@ -5,8 +5,6 @@ console.log("Alô Mundo!")
 //document - O document manipula elementos do DOM
 //document.write("Olá Mundo!")
 
-const btn = document.getElementById("btnEnviar")
-
 //function msg(){
 //  alert('CLIQUEI')
 //}
@@ -35,3 +33,28 @@ var c = 5
 //CRIAR UM OBJETO
 //ADICIONAR OS DADOS DOS CAMPOS NO OBJETO
 //IMPRIMIR O OBJETO COM console.log()
+const tarefa = {
+    nmTask:'' ,
+    descTask:'' ,
+    dtTask:'' ,
+     task : function (nmTask,descTask,dtTask){
+        this.nmTask   = nmTask
+        this.descTask = descTask
+        this.dtTask   = dtTask
+    }
+}
+
+//Recuperando o botão de adicionar tarefas\
+const btn = document.getElementById('btnEnviar')
+
+//Atrelando o evento de click ao botão de adicionar tarefa
+btn.addEventListener('click', function(){
+    //Recuperando os dados do FORM
+    let inputTask = document.querySelectorAll('input[type=text], input[type=date]')
+
+    tarefa.task(inputTask[0].value, inputTask[1].value, inputTask[2].value)
+    console.log(tarefa)
+
+
+})
+
