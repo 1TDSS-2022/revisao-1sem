@@ -45,18 +45,26 @@ btnEnviar.addEventListener("click", ()=>{
 //Criar um objeto
 //Adicionar os dados dos campos no objeto
 //Imprimir o objeto com consoe.log()
-let informacoes = {
-    tarefa : "Lição de casa",
-    data : "2003-11-10",
-    descricao : "Descrição teste",
+const informacoes = {
+    tarefa : "",
+    data : "",
+    descricao : "",
+    preencher : function(tarefa, data, descricao){
+        this.tarefa = tarefa.value
+        this.data = data.value
+        this.descricao = descricao.value
+    }
 }
 
 btnEnviar.addEventListener("click", ()=>{
-    let campos = document.querySelectorAll('input')
-
-    campos[0].value = informacoes.tarefa
-    campos[1].value = informacoes.data
-    campos[2].value = informacoes.descricao
+    //Recuperando dados dos forms
+    let campos = document.querySelectorAll('input[type=text], input[type=date]')
+    	
+    informacoes.preencher(campos[0], campos[1], campos[2])
+    console.log(informacoes)
+    //campos[0].value = informacoes.tarefa
+    //campos[1].value = informacoes.data
+    //campos[2].value = informacoes.descricao
 })
 
 console.log(informacoes)
@@ -67,3 +75,5 @@ btnLimpar.addEventListener("click", ()=>{
     document.getElementById('dtTaskId').value = "";
     document.getElementById('descTaskId').value = "";
 })
+
+
