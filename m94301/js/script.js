@@ -7,25 +7,39 @@
 
 const btn = document.getElementById("btnEnviar")
 
-//function msg(){
-//    alert('CLIQUEI')
-//}
+const btn2 = document.getElementById("btnEnviar2")
 
-btn.addEventListener("click",()=>{
-    alert('Resultado: ${minhaFuncao()}' )
-    Let inputTask = document.querySelectorAll("input") 
-
-    inputTask[2].value = btn.innerText
-    
+//addEventLister - Adiciona um evento ao elemento da página
+//Função declarada dentro do metodo
+//Explicação ao invés de "  func(){ alert("alerta")}  "
+//vira  "   ()=>{ alert("alerta")}  "
+btn.addEventListener("click", ()=>{
+    alert ("CLICADO POR FUNÇÃO ANONIMA")
 })
 
-const minhaFuncao =() => {
-    Let a = 10
-    Let b = 10
-    return (a + b + c)
+
+btn2.addEventListener("click", ()=>{
+    alert('Resultado: ' + minhaFuncao())    
+})
+
+function minhaFuncao() {
+
+    //LET - Utilizado em escopo fechado
+    let a = 10;
+    let b = 10;
+    return (a + b);
 }
 
-
-
-
+// utilizado em escopo aberto
 var c = 5
+
+const btn3 = document.getElementById("btnEnviar3")
+
+btn3.addEventListener("click", ()=>{
+    //Cria um array com todos os input
+    let inputTask = document.querySelectorAll("input")
+
+    //Puxa o input que está na terceira posição da página HTML e troca o texto dele
+    inputTask[2].value = btn.innerText
+})
+
